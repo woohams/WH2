@@ -1,0 +1,34 @@
+Help -> EclipseMarketplace -> Spring3 3.9.10
+
+Spring Tools 3 - legacy
+Spring Tools 4 - boot
+(최근 기술이 boot, 여전히 다수 회사에서 legacy를 사용중이므로 Spring Tool 3로 배운다)
+
+프로젝트 우클릭 -> configure -> maven(빌드/배포를 관리해주는 툴)
+		빌드란 : 하나하나받아야 하는 라이브러리(JAR파일)를 dependencies만
+			잘 써준다면 그것에 맞는 것들을 받아와 준다!!!
+
+
+https://search.maven.org/
+search - spring core - org.springframework / spring-core / 5.1.9.RELEASE(클릭)
+
+  <dependencies>
+  	<dependency>
+ 	  <groupId>org.springframework</groupId>
+  	  <artifactId>spring-core</artifactId>
+  	  <version>5.1.9.RELEASE</version>
+	</dependency>
+	
+	<dependency>
+      	  <groupId>org.springframework</groupId>
+      	  <artifactId>spring-context</artifactId>
+      	  <version>5.1.9.RELEASE</version>
+	</dependency>
+  </dependencies>
+
+https://mvnrepository.com/
+spring context - org.springframework - Spring Context - 5.1.9.RELEASE
+
+
+
+

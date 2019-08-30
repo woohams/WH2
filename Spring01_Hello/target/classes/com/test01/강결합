@@ -1,0 +1,5 @@
+강결합 : 객체 간 결합도가 강한 프로그램
+
+- HelloApp 에서 MessageBean을 직접 객체 생성하여 사용하고 있다.
+
+- MessageBean 클래스를 다른 클래스로 변경할 경우, HelloApp의 소스를 같이 수정해 주어야 한다.

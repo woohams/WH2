@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="today" class="java.util.Date"></bean>
+
+<!-- 	<bean id="dto" class="com.test03.UserDto">
+		<constructor-arg><value>홍길동</value></constructor-arg>
+		<property name="myDate" ref="today"></property>	property는 해당 객체에 setter를 호충해준다 !!(여기서는 setMyDate 호출)
+	</bean> -->
+	
+	<!-- <bean id="birthday" class="java.util.Date">
+		<constructor-arg name="year" value="94"/>	year + 1900
+		<constructor-arg name="month" value="2"/>	month는 0부터
+		<constructor-arg name="date" value="30"/>
+	</bean> -->
+	
+	<!-- setter로 호출 -->
+	<bean id="birthday" class="java.util.Date">
+		<property name="year" value="94"/>
+		<property name="month" value="2"/>
+		<property name="date" value="30"/>
+	</bean>
+	
+	<bean id="dto" class="com.test03.UserDto">
+		<constructor-arg value="진우현"/>
+		<property name="myDate" ref="birthday"/>
+	</bean>
+	
+
+	<bean id="service" class="com.test03.UserServiceImpl"/>
+	
+</beans>
+
+
