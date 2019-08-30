@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="today" class="java.util.Date"></bean>
+	<bean id="tomorrow" class="java.util.Date">
+		<property name="year" value="119"/>
+		<property name="month" value="7"/>
+		<property name="date" value="23"/>
+	</bean>
+
+	<bean id="bar" class="com.test01.Bar"/>
+	<bean id="foo" class="com.test01.Foo" lazy-init="true">
+		<!-- 1.Foo(Date date) 생성자 호출 -->
+		<constructor-arg ref="today"></constructor-arg>
+		<!-- 2.setBar() 호출 -->
+		<property name="bar" ref="bar"></property>
+		<!-- 3.setDate() 호출 : 내일날짜 -->
+		<property name="date" ref="tomorrow"></property>
+		<!--  4.setNum() 호출  : 숫자 아무거나-->
+		<property name="num"><value type="double">10.33</value></property>	<!-- 여기서도 타입줄 수 있지만 파라미터타입이 float...<< -->
+		<!-- 5.setStudent 호출 -->
+		<property name="student">
+			<array>
+				<value>Student1</value>
+				<value>Student2</value>
+				<value>Student3</value>
+			</array>
+		</property>
+		<!-- 6.setInfo() 호출 -->
+		<property name="info">
+			<list>
+				<value>Spring</value>
+				<value>Summer</value>
+				<value>Fall</value>
+				<value>Winter</value>
+			</list>
+		</property>
+		<!--  7.setSeason() 호출 -->
+		<property name="season">
+			<map>
+				<entry> <!-- entry는? map안에서 key와 value를 따로 갖고있는 얘 -->
+					<key>
+						<value>1</value>
+					</key>				
+						<value>Spring</value>				
+				</entry>
+				<entry key="2" value="Summer"/>
+					
+				<entry>
+					<key>
+						<value>3</value>
+					</key>				
+						<value>Fall</value>				
+				</entry>
+				<entry>
+					<key>
+						<value>4</value>
+					</key>				
+						<value>Winter</value>				
+				</entry>
+			</map>
+		</property>
+		<!-- 8.setScore() 호출  // 1. list객체 만들어서 inner bean으로, 2.따로 만들어서 ref로-->
+		<property name="score">
+			<list>
+				<bean id="score1" class="com.test01.Score">
+					<constructor-arg value="1"/>
+					<constructor-arg value="user1"/>
+					<constructor-arg value="100"/>
+					<constructor-arg value="70"/>
+					<constructor-arg value="88"/>
+				</bean>
+				<ref bean="score2"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="score2" class="com.test01.Score">
+		<constructor-arg value="2"/>
+		<constructor-arg value="user2"/>
+		<constructor-arg value="70"/>
+		<constructor-arg value="76"/>
+		<constructor-arg value="60"/>
+	</bean>
+	
+</beans>
+
+
+
+

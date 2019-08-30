@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="singleton" class="com.test01.AbstractTest" factory-method="getInstance"/>
+	<!--  <![CDATA[		// factory-method
+The name of a factory method to use to create this object. 
+Use constructor-arg elements to specify arguments to the factory method, if it takes arguments. 
+Autowiring does not apply to factory methods. If the "class" attribute is present, 
+the factory method will be a static method on the class specified by the "class" attribute on this bean definition. 
+Often this will be the same class as that of the constructed object 
+- for example, when the factory method is used as an alternative to a constructor. 
+However, it may be on a different class. 
+In that case, the created object will *not* be of the class specified in the "class" attribute. 
+This is analogous to FactoryBean behavior. 
+If the "factory-bean" attribute is present, the "class" attribute is not used, 
+and the factory method will be an instance method on the object returned from a getBean call with the specified bean name. 
+The factory bean may be defined as a singleton or a prototype. 
+The factory method can have any number of arguments. Autowiring is not supported. 
+Use indexed constructor-arg elements in conjunction with the factory-method attribute. 
+Setter Injection can be used in conjunction with a factory method. Method Injection cannot, 
+as the factory method returns an instance, which will be used when the container creates the bean.
+]]> -->
+	
+</beans>
+
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="emp" class="com.test05.Emp">
+		<property name="name" value="user1"></property>
+		<property name="salary" value="2,000,000원"></property>
+	</bean>
+	
+	<bean id="emp2" class="com.test05.Emp">
+		<property name="name" value="user2"></property>
+		<property name="salary" value="2,300,300원"></property>
+	</bean>
+
+	<bean id="user1" class ="com.test05.Developer">
+		<property name="emp" ref="emp"></property>
+		<property name="dept" value="기획"></property>
+	</bean>
+
+	<bean id="user2" class="com.test05.Engineer">
+		<property name="emp" ref="emp2"></property>
+		<property name="dept" value="개발"></property>
+	</bean>
+</beans>

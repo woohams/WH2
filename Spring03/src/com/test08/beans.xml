@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="TV1" class="com.test08.SamsongTV" lazy-init="true"></bean>
+	<bean id="TV2" class="com.test08.LzTV" lazy-init="true"></bean>
+	<!-- lazy-init은 MTest에서 만들기 전까지 만들어놓지 않기 때문에 메모리누수가 없다. MTest에서 생성한 뒤에야 만들어 준다. -->
+	<!-- lazy가 붙으면 생성을 늦추겠다는 뜻 !!! init은 생성한 뒤 초기화 "ture"의 경우 늦게 생성, default는 beans에다가 걸어놓고 그 속성에 따라갈때 사용 !! // default면 생성자는 만들어 놓게 된다.-->
+	
+</beans>
+

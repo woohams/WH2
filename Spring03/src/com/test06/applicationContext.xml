@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="emp" class="com.test06.Emp" c:name="user3" c:salary="2,222,222원"/>
+	<bean id="user3" class="com.test06.Developer" c:emp-ref="emp" c:dept="개발"/> <!-- c: 은 constructor-arg를 의미한다 -->
+	
+	
+	<bean id="emp2" class="com.test06.Emp" p:name="user4" p:salary="2,500,000원"/>
+	<bean id="user4" class="com.test06.Engineer" p:emp-ref="emp2" p:dept="기술"/> <!-- p: 은 property를 의미한다 -->
+
+</beans>
