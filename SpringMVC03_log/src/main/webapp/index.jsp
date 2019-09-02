@@ -9,7 +9,7 @@
 </head>
 <body>
 	
-	<h1><a href="list.do">list</a></h1>
+	<h1><a href="list.do">L I S T</a></h1>
 
 </body>
 </html>
