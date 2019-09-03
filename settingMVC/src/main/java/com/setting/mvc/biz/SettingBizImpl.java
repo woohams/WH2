@@ -49,4 +49,15 @@ public class SettingBizImpl implements SettingBiz {
 		return dao.login(id, pw);
 	}
 
+	@Override
+	public String test() {
+
+		int res = dao.insert(new SettingDto(100,"1","1","1","1"));
+
+		String test = dao.test();
+		test.length();
+		
+		return test;
+	}
+
 }

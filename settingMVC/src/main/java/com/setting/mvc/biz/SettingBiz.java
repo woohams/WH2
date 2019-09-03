@@ -12,5 +12,6 @@ public interface SettingBiz {
 	public int update(SettingDto dto);
 	public int delete(int seq);
 	public SettingDto login(String id, String pw);
+	public String test();
 
 }

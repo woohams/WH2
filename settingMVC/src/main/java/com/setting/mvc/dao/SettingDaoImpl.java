@@ -113,6 +113,12 @@ public class SettingDaoImpl implements SettingDao {
 		return dto;
 	}
 
+	@Override
+	public String test() {
+		
+		return null;
+	}
+
 }
 
 

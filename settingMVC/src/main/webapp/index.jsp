@@ -10,7 +10,8 @@
 <body>
 	
 	<h1><a href="list.do">L I S T</a></h1>
-	<a href="loginform.do">=== L O G I N ===</a>
+	<a href="loginform.do">=== L O G I N ===</a><br/><br/>
+	<a href="test.do">====T E S T====</a>
 
 </body>
 </html>
