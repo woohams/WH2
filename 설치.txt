@@ -1,0 +1,15 @@
+1. chrome
+2. notepadd++(vs code전에 많이 사용)
+3. 반디집(더 가벼움, 맥에서 유료)
+4. typore(markdown editor) 
+markdown? readme.md ...(git)
+5.d2 coding(글꼴)
+
+==============
+
+1. java(JDK) 
+2. eclipse - IDE (통합 개발 환경) : 서버와 런타임 실행 -> 코드 작성 중 빨간줄 뜨는 것
+3. oracle db 설치
+4. tomcat 설치
+port번호 8080(겹침) -> 8787
+5. spring 설치(help -> marketplace)
