@@ -42,7 +42,7 @@ public class HomeController {
 		return "home";
 	}
 
-	@RequestMapping(value = "/list.do", method = RequestMethod.GET)
+	@RequestMapping(value = "/list.do", method = {RequestMethod.GET ,RequestMethod.POST})
 	public String selectList(Model model) {
 
 		model.addAttribute("list", biz.selectList());

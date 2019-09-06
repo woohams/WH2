@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.setting.mvc.dao.SettingDao;
 import com.setting.mvc.dto.SettingDto;
@@ -27,29 +28,26 @@ public class SettingBizImpl implements SettingBiz {
 
 	@Override
 	public int insert(SettingDto dto) {
-		// TODO Auto-generated method stub
 		return dao.insert(dto);
 	}
 
 	@Override
 	public int update(SettingDto dto) {
-		// TODO Auto-generated method stub
 		return dao.update(dto);
 	}
 
 	@Override
 	public int delete(int seq) {
-		// TODO Auto-generated method stub
 		return dao.delete(seq);
 	}
 
 	@Override
 	public SettingDto login(String id, String pw) {
-		// TODO Auto-generated method stub
 		return dao.login(id, pw);
 	}
 
 	@Override
+	@Transactional
 	public String test() {
 
 		int res = dao.insert(new SettingDto(100,"1","1","1","1"));

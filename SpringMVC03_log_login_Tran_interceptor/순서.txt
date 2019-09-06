@@ -40,7 +40,8 @@
 
 23. com.hellow.mvc.common.interceptor / LoginInterceptor (impl HandlerInterceptor)
 	(사용 하는 곳 : Login시 session이 없으면 다른 곳으로 보낼 때 많이 사용 !!)
-24. 
+24. servelt-context.xml <interceptors...+mapping beans class="">
+
 
 
 

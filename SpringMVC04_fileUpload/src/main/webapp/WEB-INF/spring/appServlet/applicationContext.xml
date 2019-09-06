@@ -5,9 +5,34 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	
+<!-- 
+	스프링 설정파일에 MultipartResolver 설정
+	Multipart 지원 기능을 사용하려면 먼저 MultipartResolver를 스프링 설정 파일에 등록.
+	스프링에서 기본으로 제공하는 MultipartResolver는 CommonsMultipartResolver이다. 
+	CommonsMultipartResolver를 MultipartResolver로 사용하려면 다음과 같이 빈 이름으로 "multipartResolver"를 사용해서 등록.
+
+ 	※ DispatcherServlet은 이름이 "multipartResolver"인 빈을 사용하기 때문에 다른 이름(아이디)을 지정할경우 MultipartResolver로 사용되지 않음.
+-->	
+	
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-		<property name="maxUploadSize" value="100000000"/>
-		<property name="defaultEncoding" value="UTF-8"></property>
+		<property name="maxUploadSize" value="100000000"/> 
+<!-- 
+		최대 업로드 가능한 바이트 크기, -1은 제한이 없음을 의미, 기본값은 -1 
+ -->
+		<property name="defaultEncoding" value="UTF-8"/> 
+<!-- 	
+		요청을 파싱할 때 사용할 캐릭터 인코딩. 
+		지정하지 않을 경우, HttpServletRequest.setCharacterEncoding() 메서드로 지정한 캐릭터 셋이 사용. 
+		아무 값도 없을 경우 ISO-8859-1을 사용. 	
+-->
+<!-- 
+		<property name="maxInMemorySize"></property> 
+		디스크에 임시 파일을 생성하기 전에 메모리에 보관할수있는 최대 바이트크기. 기본 값은 10240 바이트이다.
+-->
+<!--  
+		<property name="uploadTempDir"></property>
+		임시디렉터리 지정
+-->
 	</bean>
 	
 	
